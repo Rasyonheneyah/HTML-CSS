@@ -1,5 +1,5 @@
 # Lilivros
-<img src="https://raw.githubusercontent.com/Rasyonheneyah/lilivros/main/imgs/iconelilivrossite.png" alt="Ícone Lilivros" width="150"/>
+<img src="https://github.com/Rasyonheneyah/HTML-CSS/blob/main/0-Projetos/lilivros/imgs/iconelilivrossite.png" alt="Ícone Lilivros" width="150"/>
  Site para colecionar livros lidos
 
 O Lilivros é um projeto desenvolvido para ajudar você a organizar e registrar os livros que já leu. Nele é possível adicionar novos títulos informando nome do autor, quantidade de páginas, sua nota pessoal, descrição e até a capa do livro através de um link de imagem.
