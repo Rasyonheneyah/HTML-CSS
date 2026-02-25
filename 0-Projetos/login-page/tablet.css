@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#page-login {
+    justify-content: center;
+    max-width: 575px;
+    border-radius: 15px;
+    
+}
+
+
+
+
+
+.image-login{
+        background-image: url(image/loginimage/logintablet.png);
+        display: block;
+        
+}
+#page-login .login-sec, #page-login .image-login{
+    width: 50%;
+}
+
+/* MAIN DO REGISTER */
+
+#main-register{
+    min-width: 500px;
+    width: 75vw;
+    
+}

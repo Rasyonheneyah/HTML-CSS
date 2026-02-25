@@ -1,0 +1,448 @@
+@charset "UTF-8";
+
+/* --- Fontes personalizadas --- */
+@font-face {
+    font-family: 'Gameplay';
+    src: url(fontes/Gameplay.ttf);
+}
+
+/* --- Corpo da página --- */
+/** Espaço para o header fixo */
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-wrap: break-word;
+}
+
+/* --- Cabeçalho fixo --- */
+header {
+    background-color: #1789FC;
+    box-shadow: 1px 2.5px 15px #838383a2;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre marca e menu */
+    padding: 0 1em;
+    width: 100%;
+    position: fixed;
+    font-size: 23px;
+    height: 75px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* --- Branding --- */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/*---Icones do menu---*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+.botao-nav.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 0.3em; 
+}
+  
+
+/* PEGA SOMENTE QM TEM O ICONE E PORTHON AO MESMO TEMPO */
+.icone.porthon {
+    background-image: url('porthon.png'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* --- Título no cabeçalho --- */
+h1#theader {
+    margin-top: 0.1em;
+    font-size: 45px;
+    display: inline-block;
+    margin-left: -1.8em;
+    font-family: 'Gameplay';
+    text-shadow: 2px 2px 5px #0028ad8a;
+}
+.subh1 {
+    color: #0028ad; 
+}
+
+/* --- Menu de navegação --- */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Container de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Itens da lista no nav */
+nav > ul {
+    display: flex;
+    gap: 0.5em;
+    list-style: none; /* remov bolinhas */
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+
+nav li {
+    margin: 0 0.5em;
+}
+
+/* --- Botões gerais --- */
+.botao-nav, .submenu-item {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.botao-nav {
+    background-color: #0028ad;
+    color: white;
+    box-shadow: 1px 1px 3px #00155c8a;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em; 
+}
+
+.botao-nav:hover, .botao-nav:focus {
+    background-color: #c26e00;
+    outline: none;
+}
+
+/* --- Dropdown --- */
+.dropdown {
+    position: relative;
+}
+
+/** Esconde submenu por padrão */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #1789FC;
+    border-radius: 8px;
+    padding: 0.5em;
+    top: 100%;
+    left: 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+/* --- Submenu específico para Python --- */
+/** Caminho do seu ícone */
+.submenu-item.python {
+    background-color: #0028ad;
+    background-image: url('python.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 24px 24px;
+    padding-left: 40px; 
+    color: white;
+    font-size: 0.65em;
+    padding-right: 2em;
+}
+
+.submenu-item.python:hover {
+    background-color: #c26e00;
+}
+
+/* --- Botão hamburguer --- */
+/** Esconder o botão p/não-mobile */
+.hamburguer {
+    display: none;
+    background: none;              /* Remov fundo padrão bom p/ botões */
+    border: none;                  /* Remove borda padrão do botão */
+    font-size: 35px;      /*TAMANHO DO HAMBURGUER */          
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+/* --- Conteúdo principal --- */
+main {
+    margin: 0 0 6.5em 0;
+    padding-bottom: 1em;
+    padding-top: 5em;
+}
+
+h1, h2, h3 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
+    margin: 0;
+    font-weight: bold;
+}
+
+h1 {
+    color: #F08700;
+    text-indent: 2em;
+    font-size: clamp(2rem, 5vw, 4em);
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 3em);    
+    color: #0028ad;
+    text-indent: 0.5em;
+    margin: 0.5em;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3.5vw, 2.5em);    
+    color: #1789FC;
+    text-indent: 0.6em;
+    margin: 0.25em;
+}
+
+main > p {
+    text-indent: 3em;
+    padding: 0 1em;
+    text-align: justify;
+    margin: 0;
+}
+.lista{
+    padding: 0em 0em 1em 4em;
+
+}
+.linksite {
+    text-decoration: none;
+}
+
+/* --- Imagens ---*/
+.imagem-container {
+    text-align: center;
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 300px; 
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #1789FC;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #c26e00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px rgba(0, 40, 173, 0.4);
+}
+
+.imagem-container p {
+    margin-top: 0.8em;
+    color: #0028ad;
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* --- Código --- */
+code {
+    background: linear-gradient(90deg, #5A6459, #5D675B, #606A5E, #5D675B, #5A6459);
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin: 0em 1em;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    display: block;
+    max-width: 100%;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 2em)
+}
+
+.nota{
+    font-style: italic; color: #888; margin-top: 10px;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #EFCA08;
+    min-height: 3vh;
+    box-shadow: -1px -2.5px 15px #838383a2;
+    width: 100%;
+    font-size: 1.8em;
+    position: absolute;
+    margin: auto;
+    box-sizing: content-box;
+    color: #1789FC;
+    left: 0;
+    right: 0;
+}
+
+footer > p {
+    padding-top: 1em;
+    transform: translateY(-1em);
+    margin: 0;
+}
+
+footer > a {
+    text-decoration: none;
+    color: #1789FC;
+}
+
+/* Ícones sociais */
+.circular {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/** Palavras-chave da linguagem, como se, entao, enquanto, fimse, etc */
+.keyword {
+    color: #569cd6;
+}
+  
+/** Nomes de funções criadas pelo usuário, como "calcularArea" */
+.function {
+    color: #dcdcaa;
+}
+  
+/** Variáveis, como numero, resultado, total */
+.variable {
+    color: #9cdcfe;
+}
+  
+/** Strings entre aspas, como "Olá, mundo!" */
+.string {
+    color: #ce9178;
+}
+  
+/** Números inteiros ou decimais, como 10, 3.14 */
+.number {
+    color: #b5cea8;
+}
+  
+/** Comentários no código, como // Isto é um comentário */
+.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+  
+  /** Comandos nativos do Portugol, como escreva, leia */
+.builtin {
+    color: #c586c0;
+}
+
+.comando{
+    margin-left:2.0em;
+}
+
+.comando input {
+    width: 200px;
+    background-color: #333;
+    color: #F08700;
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1rem, 1vw, 1em);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 1em;
+}
+  
+.comando button {
+    font-size: clamp(1rem, 1vw, 1em);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: #0028ad;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+  
+.comando button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #001763;
+}
+  
+.comando #resultado {
+    font-size: clamp(1rem, 1vw, 2em);
+    margin-top: 20px;
+    color: #F08700;
+    
+}
+  
+.tabela-variaveis {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace;
+    margin-top: 2em;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 2px solid #444;
+    font-size: clamp(1rem, 1.5vw, 1em);
+
+}
+
+.tabela-variaveis th,
+.tabela-variaveis td {
+    border: 1px solid #444;
+    padding: 0.35em;
+    text-align: left;
+}
+
+.tabela-variaveis thead {
+    background-color: #292929;
+    color: #F08700;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.tabela-variaveis tbody tr:hover {
+    background-color: #2d2d2d;
+}
+
+.tabela-variaveis code {
+    color: #9cdcfe;}
+table code{
+    padding: 0.25em;
+}
+
+table{
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+}

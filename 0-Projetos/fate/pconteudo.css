@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* ===== FONTE RETRÔ ===== */
+@font-face {
+    font-family: 'Pixel';
+    src: url('fontes/Gameplay.ttf');
+}
+
+/* ===== RESET GLOBAL E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001011;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: #E53D00;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 1px 2.5px 15px #838383a2;
+    padding: 0 1em;
+    z-index: 1000;
+}
+
+header > h1 {
+    color: #6CCFF6;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px #000;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* ===== ÍCONES E ESFERA ===== */
+.esfera {
+    background-color: #E53D00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 0.3em;
+    border: 2px outset #F2B138;
+    color: transparent;
+}
+
+.icone {
+    background-image: url('iconetamnormal.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    display: block;
+    transform: translateX(-1.5px);
+}
+
+/* ===== TÍTULOS ===== */
+.tituloprincipal {
+    font-family: 'Pixel', sans-serif;
+    color: #E53D00;
+    text-align: center;
+    padding: 9px;
+    margin-block: 2em 1em;
+    font-size: 3.5em;
+    letter-spacing: 0.15em;
+    text-shadow: 1px 5px 15px #6CCFF6;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0 0.25em;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #FF0000;
+    text-align: center;
+    font-size: 2.8em;
+    text-shadow: 1px 1px 0px #c0c0c0;
+    padding: 5px;
+}
+
+h1#primeiro {
+    margin-top: 3em;
+}
+
+h2 {
+    color: #F2B138;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+h3 {
+    color: #525252;
+    font-size: 1.75em;
+}
+
+h4 {
+    color: #000;
+    font-size: 1.5em;
+}
+
+/* ===== TEXTO E LISTAS ===== */
+p, li {
+    text-align: left;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+ul, ol {
+    margin-left: 1.5em;
+}
+
+ul {
+    width: max-content;
+    margin: auto;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 6em auto 3em;
+    max-width: 95vw;
+    width: 60em;
+    box-shadow: 3px 5px 15px rgba(131, 131, 131, 0.637);
+    text-align: justify;
+}
+
+/* ===== LINKS E BOTÕES ===== */
+main > a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f1c99a;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(131, 131, 131, 0.637);
+    transition: all 0.3s ease;
+}
+
+main > a.voltar:hover {
+    background-color: #ec9f45;
+    color: #6c75f6;
+}
+
+/* ===== CÓDIGO (PRE) ===== */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* ===== IMAGENS E DECORAÇÕES ===== */
+.circular {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: #000;
+    min-height: 3em;
+    color: #FFF;
+    text-align: center;
+    padding: 1em;
+    margin-top: 5em;
+}
+
+footer > p {
+    margin: 0;
+    transform: translateY(-0.5em);
+}

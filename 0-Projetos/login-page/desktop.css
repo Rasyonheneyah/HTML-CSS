@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+
+
+main#page-login {
+    min-width: 800px;
+     
+    min-height: 500px;
+    border-radius: 15px;
+    height: 50%;
+}
+main#page-login , #page-login .login-sec, #page-login .image-login {
+    width: 50%;
+}
+.login-sec, #login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-login{
+    background-image: url(image/loginimage/logindesktop.png);
+    height: 92%;
+ 
+}
+.login-title{
+    margin-top: 20px;
+}
+form#login-form{
+    gap: 30px;
+    margin-top: 10px;
+    
+}
+
+/* MAIN DO REGISTER */

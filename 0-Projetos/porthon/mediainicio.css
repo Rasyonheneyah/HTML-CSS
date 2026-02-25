@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* --- Fontes personalizadas --- */
+@font-face {
+    font-family: 'Gameplay';
+    src: url(fontes/Gameplay.ttf);
+}
+
+@media (max-width: 900px) {
+    .hamburguer {
+        display: block;               
+        right: 1em;                    
+        z-index: 1000;                
+        position: fixed;
+
+    }
+
+    /* aparecer ao clicar */
+    .nav-principal ul {
+        display: none;
+        flex-direction: column;      /* itens empilhados*/
+        background-color: #1789FC;  
+        position: absolute;          
+        top: 100%;                   
+        right: 1em;                  
+        border-radius: 10px;         
+        padding: 1em;                
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+        z-index: 999;                /* sobrepor elementos */
+    }
+
+    .nav-principal ul.show {
+        display: flex; /*menu visivel qnd .show for ativada*/
+    }
+
+    .botao-nav {
+        white-space: nowrap; /* texto n quebra duas linhas */
+    }
+}
+@media (max-width: 700px) {
+    h1#theader{
+        font-size: 40PX;
+    }
+}
+@media (max-width: 380px) {
+    h1#theader{
+        font-size: 35PX;
+    }
+}
+
+

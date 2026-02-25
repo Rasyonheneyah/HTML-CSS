@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilivros</title>
+    <link rel="shortcut icon" href="imgs/lilivros_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+    <!--
+    SUGESTÕES DE MELHORA:
+    - AddLivroNaLista() Fica iterando os livros que já foram colocados repetitidamente desnecessariamente. É necessário que a adição seja individual.
+
+    Função de "Já li o Livro" "Não li ainda" "Estou lendo", podendo colocar a página atual
+    
+    
+    -->
+</head>
+<body>
+    <header>
+            <span class="logo-site"> </span>
+            <p>Lilivros</p>
+    </header>
+
+
+    <div id="sombra">
+        <div class="menu-geral">
+            <div class="fechar">
+                <button onclick="fecharmenu()" class="botao-fechar">&times;</button>
+                </div>
+            <p class="menu-geral-titulo">Novo Livro</p>
+            <label for="form-titulo">Título do Livro:</label>
+            <input type="text" id="form-titulo" name="form-titulo" placeholder="1984">
+            <br>
+            <label for="form-autor">Nome do Autor:</label>
+            <input type="text" id="form-autor" name="form-autor" placeholder="George Orwell">
+            <br>
+            <label for="form-capa">Link da Capa do Livro:</label>
+            <input type="url" id="form-capa" name="form-capa" placeholder="https://capa-1984-george-orwell.png">
+            <br>
+            <label for="form-paginas">Número de Páginas:</label>
+            <input type="number" id="form-paginas" name="form-paginas">
+            <br>
+            <label for="form-sinopse">Sinopse do Livro:</label>
+            <textarea rows="4" cols="50" id="form-sinopse" name="form-sinopse" placeholder="1984 é um famoso romance inglês escrito pelo autor modernista George Orwell. Publicado pela primeira vez em 1949, ele conta a história de Winston Smith, um cidadão inserido em um contexto de repressão. Ele vive na Inglaterra de 1984, chamada de Oceânia. Nesse regime totalitarista, todos são vigiados pelo Grande Irmão."></textarea>
+            <br>
+            <label for="form-nota">Nota do Livro:</label>
+            <input type="number" min="0" max="10" id="form-nota" name="form-nota" placeholder="10"  >
+            <br>
+            <button name="AddLivroslista" id="AddLivroslista" onclick="ValidarLivro()">Adicionar Livro</button>
+            <div id="blockaddbooks"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <main>
+        <div class="caixa-bp">
+            <input id="bp-geral"   class="barra-pesquisa" type="text" placeholder="Digite um livro...">
+
+        </div>
+            <!--Poup para colocar a Janela de Adicionar ou a Exibição dos itens.-->
+            <div id="novapagina"></div>
+
+
+        <div class="box-1">
+            <div class="box-1-1">
+                <button onclick="AbrirAdicionar()" style="cursor: cell;">
+                    <span class="material-symbols-outlined icone-menu">add</span>
+                    <p>Adicionar</p>
+                </button>
+            
+                <button onclick="">
+                    <span class="material-symbols-outlined icone-menu">edit</span>
+                    <p>Editar</p>
+                </button>
+              
+                <button onclick="modoExcluir()" style="cursor: crosshair;">
+                    <span  class="material-symbols-outlined icone-menu"> delete </span>
+                    <p>Excluir</p>
+                </button>
+            </div>
+            <div class="box-1-2">
+                <div class="livro-padrao" style="background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FP%2FB07XLVGMWZ.01._SCLZZZZZZZ_SX500_.jpg&f=1&nofb=1&ipt=6a939dec2a7fd8a77cedea2f9784aa3b67652943f3e5b82877f9f298d387bbbe); background-repeat: no-repeat; background-size: contain; ">
+                    <div class="livro-titulo">
+                        <p class="livro-titulo-texto">Senhor dos Anéis </p>
+                    </div>
+                </div>
+
+                <div id="acreslivros">
+
+
+                </div>
+                
+
+                
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+
+
+
+    <div class="box-1"></div>
+
+</body>
+</html>

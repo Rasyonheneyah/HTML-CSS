@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Publivros | Login</title>
+    <link rel="stylesheet" href="main.css" class="css" media="all">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 768px) and (max-width: 992px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 992px)">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="shortcut icon" href="icos/livrobranco.ico" type="image/x-icon">
+</head> 
+<body>
+    <!--Ideia, fazer um site com logins para diferentes media queries -->
+
+    <header>
+        <div id="hlogtit">
+<!--
+            Elemento que ABRE o menu.
+            O clique chama a função JS e passa o evento
+            para que a propagação seja interrompida
+            (evita abrir e fechar no mesmo clique).
+-->
+            <button id="hamburguer" onclick="showDiv(`menu`, event)">
+                
+                
+                
+                    <span id="burguer" class="material-symbols-outlined">menu</span>
+                
+            </button>
+
+
+            <div id="hlogo">
+
+            </div>
+
+            <div id="htitulo">
+                Publivros
+            </div>
+        </div>
+        <nav id="menu">
+            <ul id="menu-list">
+                <li class="menu-item">
+                    <a href="#">
+                        <span class="material-symbols-outlined">home</span>
+                         Home
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <span class="material-symbols-outlined">book_2</span>
+                        Publivros
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <span class="material-symbols-outlined">group</span>
+                        Contato
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html">
+                        <span class="material-symbols-outlined">login</span>
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="divcentral">
+        <main id="page-login" class="show">
+            <div class="image-login">    </div>
+        
+            <div class="login-sec">
+                <h1 class="login-title">Login</h1>
+                <form id="login-form" action="login.json" method="post" autocomplete="on">
+                    <div id="userpassword">
+                        <div class="campo-form">
+                            <label for="user">
+                                <span class="material-symbols-outlined">person</span>
+                            </label>
+                            <input class="input-login" type="text" name="user" id="user" required minlength="5" maxlength="12" autocomplete="username" pattern="[A-Za-z]{1}[A-Za-z0-9]{4,11}" placeholder="username..." title="Use de 5 a 12 caracteres, apenas letras e números. O primeiro caractere deve ser uma letra." size="15" >
+                        </div>
+                        <div class="campo-form">
+                            <label for="password">
+                                <span class="material-symbols-outlined">key</span>
+                            </label>
+                            <input class="input-login" type="password" name="password" id="password" minlength="8" maxlength="16" required autocomplete="current-password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z0-9]{8,16}" placeholder="********"
+                            title="Use de 8 a 16 caracteres, apenas letras e números." size="15">
+                        </div>
+                    </div>
+                    <div id="remembercx">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Lembrar senha</label>
+                    </div>
+                    <div>
+                        <input id="login-button" type="submit" value="Login">
+                    </div>
+                    <div class="forgotpassword">
+                        <a href="#" >Esqueci a senha</a>     <br>
+                        <a href="#" onclick="openRegisterToLogin()">Registrar-se</a>
+                    </div>
+                </form>
+            </div>     
+        </main>
+        <main id="main-register" class="">
+            <form action="register.json" autocomplete="on" >
+                <button id="btn-return" onclick="openRegisterToLogin()"> <span style="font-size: 30px; font-weight: 900;" class="material-symbols-outlined"> arrow_back </span> </button>
+        
+                    <h1>Registre uma nova conta</h1>
+                    <div id="register-campos">
+                        <div>
+                            <label for="newuser">Nome: </label>
+                            <input type="text" name="newuser" id="newuser" required minlength="5" maxlength="12" autocomplete="username" pattern="[A-Za-z]{1}[A-Za-z0-9]{4,11}" placeholder=" username " title="Use de 5 a 12 caracteres, apenas letras e números. O primeiro caractere deve ser uma letra." size="15">
+                        </div>
+                        <div>
+                            <label for="newemail">Email: </label>
+                            <input type="email" name="newemail" id="newemail" required  maxlength="254" autocomplete="email" pattern="^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$" placeholder=" example@mail.com " title="Email inválido. Use letras, números e . _ % + -. Ex: usuario@email.com"
+                             size="25">
+                        </div>
+                        <div>
+                            <label for="newpassword1">Senha: </label>
+                            <input type="password" name="newpassword1" id="newpassword1" required minlength="8" maxlength="16" required autocomplete="current-password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z0-9]{8,16}" placeholder="********"
+                                title="Use de 8 a 16 caracteres, apenas letras e números." size="15">
+                        </div>
+                        <div>
+                            <label for="newpassword2">Repita a senha: </label>
+                            <input type="password" name="newpassword2" id="newpassword2" required minlength="8" maxlength="16" required autocomplete="off"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z0-9]{8,16}" placeholder="********"
+                                title="Use de 8 a 16 caracteres, apenas letras e números." size="15">
+                        </div>
+                        <div>
+                            <label for="newday">Data de Nascimento: </label>
+                            <input type="date" name="newday" id="newday" required>
+                        </div>
+                    </div>
+                    <div>
+                            <input id="login-button" type="submit" value="Registrar" style="margin: 20px 0px; padding: 10px 50px;">
+                    </div>
+        
+            </form>
+        </main>
+    </div>
+
+    <script>
+        const dataNiver = document.getElementById(`newday`)
+        const dataAtual = new Date()
+        dataNiver.max = `${dataAtual().getFullYear() - 13}-12-31`
+        dataNiver.min = `1900`
+
+    
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
