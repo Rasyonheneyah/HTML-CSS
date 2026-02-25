@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos HTML & CSS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 40px;
+            color: #cbd5e1;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s ease;
+            text-decoration: none;
+            color: #f1f5f9;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Meus Projetos</h1>
+        <p>Selecione um dos projetos abaixo para visualizar:</p>
+
+        <div class="projects">
+
+            <a class="card" href="https://rasyonheneyah.github.io/HTML-CSS/0-Projetos/social-media/index.html" target="_blank">
+                <h2>Social Media</h2>
+                <p>Projeto de interface para redes sociais.</p>
+            </a>
+
+            <a class="card" href="https://rasyonheneyah.github.io/HTML-CSS/0-Projetos/login-pageindex.html" target="_blank">
+                <h2>Login Page</h2>
+                <p>Página de login moderna e responsiva.</p>
+            </a>
+
+            <a class="card" href="https://rasyonheneyah.github.io/HTML-CSS/0-Projetos/lilivros/index.html" target="_blank">
+                <h2>Lilivros</h2>
+                <p>Projeto de layout para livraria online.</p>
+            </a>
+
+            <a class="card" href="https://rasyonheneyah.github.io/HTML-CSS/0-Projetos/fate/index.html" target="_blank">
+                <h2>Fate</h2>
+                <p>Interface temática estilizada.</p>
+            </a>
+
+            <a class="card" href="https://rasyonheneyah.github.io/HTML-CSS/0-Projetos/porthon/index.html" target="_blank">
+                <h2>Porthon</h2>
+                <p>Projeto visual com foco em design moderno.</p>
+            </a>
+
+        </div>
+
+        <footer>
+            © 2026 - Portfólio de Projetos HTML & CSS
+        </footer>
+    </div>
+
+</body>
+</html>
